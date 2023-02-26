@@ -1,0 +1,19 @@
+<table  *ngIf="paisest.length > 0" class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Bandera</th>
+            <th>Nombre</th>
+            <th>Población</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let pais of paisest; let i = index">
+        <tr>
+            <td>{{ i + 1}}</td>
+            <td><img class="img-size" [src]="pais.flag"></td>
+            <td>{{ pais.name }}</td>
+            <td>{{ pais.population | number}}</td>
+            <td><a [routerLink]="[ '/pais', pais.name ]">ver mas</a></td>
+        </tr>
+    </tbody>
+</table>

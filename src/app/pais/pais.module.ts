@@ -5,6 +5,9 @@ import { PorPaisComponent } from './pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pages/por-region/por-region.component';
 import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { TableComponent } from './components/table/table.component';
+import { InputComponent } from './components/input/input.component';
 
 
 
@@ -13,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-    VerPaisComponent
+    VerPaisComponent,
+    TableComponent,
+    InputComponent
   ],
   exports: [
     PorCapitalComponent,
@@ -23,7 +28,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ]
 })
 export class PaisModule { }
